@@ -1,0 +1,232 @@
+#include <8051.h>
+
+
+int cont = 0;
+int x=0;
+
+void main (){
+
+TMOD = 0x2;
+EA = 1;
+ET0 = 1;
+TH0 = 0x6 ;
+TL0 = 0x6;
+TR0 = 1;
+
+P0 = 1;
+while(1);
+
+}
+
+void contar()  __interrupt (1){
+	if(++cont=4){
+	++x;
+	++cont=0;
+	}
+	
+switch (x){
+
+	case 0: P2 = 0b11111111;
+	break;
+
+	case 1: P2 = 0b11111110;
+	break;
+
+	case 2: P2 = 0b11111101;
+	break;
+
+	case 3: P2 = 0b11111100;
+	break;
+
+	case 4: P2 = 0b11111011;
+	break;
+
+	case 5: P2 = 0b11111010;
+	break;
+
+	case 6: P2 = 0b11111001;
+	break;
+
+	case 7: P2 = 0b11111000;
+	break;
+
+	case 8: P2 = 0b11110111;
+	break;
+
+	case 9: P2 = 0b11110110;
+	break;
+
+	case 10: P2 = 0b11110101;
+	break;
+
+	case 11: P2 = 0b11110100;
+	break;
+
+	case 12: P2 = 0b11110011;
+	break;
+
+	case 13: P2 = 0b11110010;
+	break;
+
+	case 14: P2 = 0b11110001;
+	break;
+
+	case 15: P2 = 0b11110000;
+	break;
+
+	case 16: P2 = 0b11101111;
+	break;
+
+	case 17: P2 = 0b11101110;
+	break;
+
+	case 18: P2 = 0b11101101;
+	break;
+
+	case 19: P2 = 0b11101100;
+	break;
+
+	case 20: P2 = 0b11101011;
+	break;
+
+	case 21: P2 = 0b11101010;
+	break;
+
+	case 22: P2 = 0b11101001;
+	break;
+
+	case 23: P2 = 0b11101000;
+	break;
+
+	case 24: P2 = 0b11100111;
+	break;
+
+	case 25: P2 = 0b11100110;
+	break;
+
+	case 26: P2 = 0b11100101;
+	break;
+
+	case 27: P2 = 0b11100100;
+	break;
+
+	case 28: P2 = 0b11100011;
+	break;
+
+	case 29: P2 = 0b11100010;
+	break;
+
+	case 30: P2 = 0b11100001;
+	break;
+
+	case 31: P2 = 0b11100000;
+	break;
+
+	case 32: P2 = 0b11011111;
+	break;
+
+	case 33: P2 = 0b11011110;
+	break;
+
+	case 34: P2 = 0b11011101;
+	break;
+
+	case 35: P2 = 0b11011100;
+	break;
+
+	case 36: P2 = 0b11011011;
+	break;
+
+	case 37: P2 = 0b11011010;
+	break;
+
+	case 38: P2 = 0b11011001;
+	break;
+
+	case 39: P2 = 0b11011000;
+	break;
+
+	case 40: P2 = 0b11010111;
+	break;
+
+	case 41: P2 = 0b11010110;
+	break;
+
+	case 42: P2 = 0b11010101;
+	break;
+
+	case 43: P2 = 0b11010100;
+	break;
+
+	case 44: P2 = 0b11010011;
+	break;
+
+	case 45: P2 = 0b11010010;
+	break;
+
+	case 46: P2 = 0b11010001;
+	break;
+
+	case 47: P2 = 0b11010000;
+	break;
+
+	case 48: P2 = 0b11001111;
+	break;
+
+	case 49: P2 = 0b11001110;
+	break;
+
+	case 50: P2 = 0b11001101;
+	break;
+
+	case 51: P2 = 0b11001100;
+	break;
+
+	case 52: P2 = 0b11001011;
+	break;
+
+	case 53: P2 = 0b11001010;
+	break;
+
+	case 54: P2 = 0b11001001;
+	break;
+
+	case 55: P2 = 0b11001000;
+	break;
+
+	case 56: P2 = 0b11000111;
+	break;
+
+	case 57: P2 = 0b11000110;
+	break;
+
+	case 58: P2 = 0b11000101;
+	break;
+
+	case 59: P2 = 0b11000100;
+	break;
+
+	case 60: P2 = 0b11000011;
+	break;
+
+	case 61: P2 = 0b11000010;
+	break;
+
+	case 62: P2 = 0b11000001;
+	break;
+
+	case 63: P2 = 0b11000000;
+	break;
+
+	case 64: P2 = 0b10111111;
+	break;
+
+	case 65: P2 = 0b10111110;
+	x=0;
+	break;
+
+
+}
+
+}
+
